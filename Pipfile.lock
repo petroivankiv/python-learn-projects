@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "85f47daa9feb5fe16cbc96e7d23f4968c205a21d8d764e150c7b16406f6e6fb1"
+            "sha256": "af512764425cc3b790f92b43cf8e45bfec10ddd2ad7c1596e4ba236bd38c09ed"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -112,6 +112,23 @@
             ],
             "markers": "platform_system == 'Windows'",
             "version": "==0.4.6"
+        },
+        "customtkinter": {
+            "hashes": [
+                "sha256:e93448a8d22121e20ec16e95960a8306e17cf7e0079766f5804b2e855e614937",
+                "sha256:f8b2db189959033539884d7faff99ebbb654c18097d761ed844180e32f0b5929"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==5.2.0"
+        },
+        "darkdetect": {
+            "hashes": [
+                "sha256:a7509ccf517eaad92b31c214f593dbcf138ea8a43b2935406bbd565e15527a85",
+                "sha256:b5428e1170263eb5dea44c25dc3895edd75e6f52300986353cd63533fe7df8b1"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==0.8.0"
         },
         "fake-useragent": {
             "hashes": [
