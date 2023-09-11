@@ -9,6 +9,7 @@ pillow = "*"
 requests = "*"
 fake-useragent = "*"
 customtkinter = "*"
+promptlib = "*"
 
 [dev-packages]
 
