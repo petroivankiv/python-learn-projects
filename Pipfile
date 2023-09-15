@@ -13,6 +13,7 @@ promptlib = "*"
 textblob = "*"
 pypdf2 = "*"
 selenium = "*"
+flask = "*"
 
 [dev-packages]
 

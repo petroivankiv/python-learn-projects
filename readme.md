@@ -1,33 +1,3 @@
-## venv
-
-### Install
-
-```python -m venv venv```
-
-### venv activation
-
-```
-# In git bash
-./venv/Scripts/activate.bat
-# In cmd.exe
-venv\Scripts\activate.bat
-# In PowerShell
-venv\Scripts\Activate.ps1
-```
-
-### Deactivate the Python venv
-If you want to delete this virtualenv, deactivate it first and then remove the directory with all its content
-
-```
-deactivate
-# If your virtual environment is in a directory called 'venv':
-rm -r venv
-```
-
-### Install Python packages in a venv
-
-```pip install simplejson```
-
 ### Pip install requirements.txt file
 A requirements.txt file contains a simple list of dependencies, one per line. In its most simple form, it could look like this:
 
