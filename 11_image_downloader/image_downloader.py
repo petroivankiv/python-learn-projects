@@ -39,5 +39,5 @@ if __name__ == '__main__':
     
     print('Завантаження...')
     
-    download_image(input_url, name=input_name, folder='starter/image_downloader')
+    download_image(input_url, name=input_name, folder='image_downloader')
     

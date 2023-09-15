@@ -40,7 +40,7 @@ def check_site(site: str, user_agent):
         
         
 def main():
-    sites: list[str] = get_sites('starter/site_checker/sites.csv')
+    sites: list[str] = get_sites('site_checker/sites.csv')
     agent = get_user_agent()
     
     for site in sites:

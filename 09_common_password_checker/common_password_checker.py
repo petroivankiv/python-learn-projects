@@ -1,5 +1,5 @@
 def check_password(password: str):
-    with open('starter/common_password_checker/passwords.txt', 'r') as f:
+    with open('common_password_checker/passwords.txt', 'r') as f:
         common_pass: list[str] = f.read().splitlines()
         
     for i, p in enumerate(common_pass, start=1):

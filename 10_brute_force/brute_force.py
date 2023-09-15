@@ -4,7 +4,7 @@ import time
 
 
 def common_guess(word: str) -> str | None:
-    with open('starter/brute_force/words.text', 'r') as f:
+    with open('brute_force/words.text', 'r') as f:
         words: list[str] = f.read().splitlines()
         
     for i, match in enumerate(words, start=1):
