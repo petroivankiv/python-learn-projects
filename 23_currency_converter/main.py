@@ -1,18 +1,22 @@
 import json
 from typing import Final
-
 import requests
+from os import getenv
+from dotenv import load_dotenv, find_dotenv
+
+# find the .env file and load it 
+load_dotenv(find_dotenv())
 
 # Constants
 BASE_URL: Final[str] = 'http://api.exchangeratesapi.io/v1/latest'
-API_KEY: Final[str] = 'YOUR_KEY'
+API_KEY: Final[str] = getenv("EXCHANGE_RATE_API_KEY")
 
 
 def get_rates(mock: bool = False) -> dict:
     """Get the current rates from a currency api"""
 
     if mock:
-        with open('rates.json', 'r') as file:
+        with open('23_currency_converter/rates.json', 'r') as file:
             return json.load(file)
 
     # Make a live request for data
@@ -50,7 +54,7 @@ def main():
     data: dict = get_rates(mock=True)
     rates: dict = data.get('rates')
 
-    convert_currency(10_000, base='USD', vs='DKK', rates=rates)
+    convert_currency(100, base='USD', vs='UAH', rates=rates)
 
 
 if __name__ == '__main__':

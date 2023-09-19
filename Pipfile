@@ -16,6 +16,7 @@ selenium = "*"
 flask = "*"
 pandas = "*"
 tabulate = "*"
+python-dotenv = "*"
 
 [dev-packages]
 

@@ -1,7 +1,12 @@
 from typing import Final
 import requests
+from os import getenv
+from dotenv import load_dotenv, find_dotenv
 
-API_KEY: Final[str] = ''
+# find the .env file and load it 
+load_dotenv(find_dotenv())
+
+API_KEY: Final[str] = getenv("CUTT_LY_API_KEY")
 BASE_URL: Final[str] = ' https://cutt.ly/api/api.php'
 
 
