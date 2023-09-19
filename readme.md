@@ -37,20 +37,6 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-### Pip uninstall
-
-```
-pip uninstall simplejson
-pip uninstall -r requirements.txt
-```
-
-### Other Pip command
-
-```
-pip list
-pip show
-```
-
 ## Issues
 
 ### Resolve dependencies
