@@ -17,6 +17,7 @@ flask = "*"
 pandas = "*"
 tabulate = "*"
 python-dotenv = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 
