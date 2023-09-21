@@ -18,6 +18,7 @@ pandas = "*"
 tabulate = "*"
 python-dotenv = "*"
 beautifulsoup4 = "*"
+geopy = "*"
 
 [dev-packages]
 
