@@ -97,7 +97,6 @@ def check_headlines(headlines: list[str], term: str, site: str):
 def main():
     # Get resourses with a classes
     resourses: dict = get_resources()
-    print(resourses.keys())
     
      # Get the user input and check for headlines
     user_input: str = input('What term would you like to check for? >> ')

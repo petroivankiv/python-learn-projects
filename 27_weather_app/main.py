@@ -7,7 +7,7 @@ def get_fmt_date(item):
     return f'{item.date:%d-%m-%y}'
 
 
-def print_plot(weather_details: list[Weather], current_weather: dict):
+def display_plot(weather_details: list[Weather], current_weather: dict):
     city: dict = current_weather.get('city')
     lines: list = []
     legends: list[str] = []
@@ -64,7 +64,7 @@ def main():
 
     print_details(weather_details)
 
-    print_plot(weather_details, current_weather)
+    display_plot(weather_details, current_weather)
 
 
 if __name__ == '__main__':
