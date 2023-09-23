@@ -19,6 +19,8 @@ tabulate = "*"
 python-dotenv = "*"
 beautifulsoup4 = "*"
 geopy = "*"
+numpy = "*"
+matplotlib = "*"
 
 [dev-packages]
 
