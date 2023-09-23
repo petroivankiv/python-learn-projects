@@ -1,13 +1,12 @@
+from model import Weather, dt
 import json
 import requests
 from typing import Final
 from os import getenv
 from dotenv import load_dotenv, find_dotenv
 
-# find the .env file and load it 
+# find the .env file and load it
 load_dotenv(find_dotenv())
-
-from model import Weather, dt
 
 
 # Constants
@@ -21,7 +20,7 @@ def get_weather(city_name: str, mock: bool = False) -> dict:
     # Return dummy data for testing
     if mock:
         print('Using mock data...')
-        
+
         with open('27_weather_app/dummy_data.json') as file:
             return json.load(file)
 
@@ -44,13 +43,19 @@ def get_weather_details(weather: dict) -> list[Weather]:
 
     # Try to add the info we want to our list_of_weather
     list_of_weather: list[Weather] = []
-    
+
     for day in days:
+        details: dict = day.get('main')
+        weather: dict = day.get('weather')
+        wind: dict = day.get('wind')
+        windSpeed: float = round(wind.get('speed') * 0.51444444, 2)
+
         w: Weather = Weather(date=dt.fromtimestamp(day.get('dt')),
-                             details=(details := day.get('main')),
                              temp=details.get('temp'),
-                             weather=(weather := day.get('weather')),
-                             description=weather[0].get('description'))
+                             humidity=details.get('humidity'),
+                             description=weather[0].get('description'),
+                             wind_speed=windSpeed)
+        
         list_of_weather.append(w)
 
     return list_of_weather

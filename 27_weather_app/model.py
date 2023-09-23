@@ -5,10 +5,10 @@ from dataclasses import dataclass
 @dataclass
 class Weather:
     date: dt
-    details: dict
     temp: str
-    weather: list[dict]
+    humidity: str
     description: str
+    wind_speed: str
 
     def __str__(self):
-        return f'[{self.date:%H:%M}] {self.temp}C° ({self.description})'
+        return f'[{self.date:%H:%M}] {self.temp}C° {self.humidity}% {self.wind_speed} m/s ({self.description})'
