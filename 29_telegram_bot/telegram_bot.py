@@ -7,6 +7,8 @@ import json
 from os import getenv
 from dotenv import load_dotenv, find_dotenv
 
+from commands import set_commands
+
 # find the .env file and load it
 load_dotenv(find_dotenv())
 
@@ -14,21 +16,9 @@ load_dotenv(find_dotenv())
 TOKEN: Final[str] = getenv("TELEGRAM_API_TOKEN")
 BOT_USERNAME: Final[str] = getenv("TELEGRAM_BOT_USER_NAME")
 
+# load knowledge base for the messages
 with open('29_telegram_bot/brain.json', 'r', encoding='utf-8') as f:
     brain: dict = json.load(f)
-
-
-# Commands
-async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Привіт! Радий вас тут бачити!')
-
-
-async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Задайте мені питання, а я спробую відповісти!')
-
-
-async def custom_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text('Команда поки не активна.')
 
 
 # Create your own response logic
@@ -65,6 +55,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Reply
     print('Bot:', response)
+    
     await update.message.reply_text(response)
 
 
@@ -79,9 +70,7 @@ def main():
     app = Application.builder().token(TOKEN).build()
 
     # Commands
-    app.add_handler(CommandHandler('start', start_command))
-    app.add_handler(CommandHandler('help', help_command))
-    app.add_handler(CommandHandler('custom', custom_command))
+    set_commands(app)
 
     # Messages
     app.add_handler(MessageHandler(filters.TEXT, handle_message))
