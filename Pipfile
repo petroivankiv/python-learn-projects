@@ -22,6 +22,7 @@ geopy = "*"
 numpy = "*"
 matplotlib = "*"
 scikit-learn = "*"
+python-telegram-bot = "*"
 
 [dev-packages]
 

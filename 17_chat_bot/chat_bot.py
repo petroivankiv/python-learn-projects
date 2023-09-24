@@ -21,6 +21,6 @@ def chat_bot(knowledge: dict):
         
 
 if __name__ == '__main__':
-    with open('intermediate/chat_bot/brain.json', 'r', encoding='utf-8') as f:
+    with open('17_chat_bot/brain.json', 'r', encoding='utf-8') as f:
         brain: dict = json.load(f)
         chat_bot(brain)
