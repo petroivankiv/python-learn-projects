@@ -23,6 +23,7 @@ numpy = "*"
 matplotlib = "*"
 scikit-learn = "*"
 python-telegram-bot = "*"
+pygame = "*"
 
 [dev-packages]
 
